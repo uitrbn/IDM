@@ -1,0 +1,33 @@
+CIFAR10/1:
+python3 -u IDM_cifar10.py --dataset CIFAR10 --model ConvNet --ipc 1 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 100 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.5 --train_net_num 1 --batch_real 5000 --net_generate_interval 5 --aug
+
+CIFAR10/10:
+python3 -u IDM_cifar10.py --dataset CIFAR10 --model ConvNet --ipc 10 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 100 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.5 --train_net_num 1 --aug
+
+CIFAR10/50:
+python3 -u IDM_cifar10.py --dataset CIFAR10 --model ConvNet --ipc 50 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 500 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.1 --train_net_num 1 --aug
+
+CIFAR100/1:
+python3 -u IDM_cifar100.py --dataset CIFAR100 --model ConvNet --ipc 1 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 100 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.5 --train_net_num 1 --batch_real 5000 --net_generate_interval 5 --aug
+
+CIFAR100/10:
+python3 -u IDM_cifar100.py --dataset CIFAR100 --model ConvNet --ipc 10 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 100 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.1 --train_net_num 1 --model_train_steps 50 --net_num 100 --aug
+
+CIFAR100/50:
+python3 -u IDM_cifar100.py --dataset CIFAR100 --model ConvNet --ipc 50 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 500 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.1 --train_net_num 1 --aug
+
+TinyImageNet:
+python3 -u IDM_tiny.py --dataset TinyImageNet --model ConvNet --ipc 1 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 100  --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.5 --train_net_num 1 --aug
+
+python3 -u IDM_tiny.py --dataset TinyImageNet --model ConvNet --ipc 10 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 500 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.5 --train_net_num 1 --aug
+
+python3 -u IDM_tiny.py --dataset TinyImageNet --model ConvNet --ipc 50 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 1000 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 1000 --syn_ce --ce_weight 0.8 --train_net_num 1 --aug --model_train_steps 50
+
+ImageNet Subset/1:
+python3 -u IDM_imagenet.py --dataset imagenet_subset --ipc 1 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 200 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 100 --syn_ce --ce_weight 3 --train_net_num 1 --net_generate_interval 50 --model ConvNet_6 --batch_real 128 --eval_begin 1 --net_num 50 --aug --batch_train 128
+
+ImageNet Subset/10:
+python3 -u IDM_imagenet.py --dataset imagenet_subset --ipc 10 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 1000 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 100 --syn_ce --ce_weight 3 --train_net_num 1 --net_generate_interval 50 --model ConvNet_6 --batch_real 128 --eval_begin 1 --net_num 50 --aug --batch_train 128
+
+ImageNet Subset/50: (intialize models with net_0_epoch_0_acc_0.1606.pth)
+python3 -u IDM_imagenet.py --dataset imagenet_subset --ipc 50 --dsa_strategy color_crop_cutout_flip_scale_rotate --init real --lr_img 0.2 --num_exp 5 --num_eval 5 --net_train_real --eval_interval 500 --outer_loop 1 --mismatch_lambda 0 --net_decay --embed_last 100 --syn_ce --ce_weight 3 --train_net_num 1 --net_generate_interval 50 --model ConvNet_6 --batch_real 128 --eval_begin 1 --batch_train 128 --net_num 100
