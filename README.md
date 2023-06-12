@@ -1,6 +1,6 @@
 # IDM
 
-This is the official implementation of paper ``improved Distribution Matching for Dataset Condensation``
+This is the official implementation of paper **Improved Distribution Matching for Dataset Condensation** in CVPR 2023.
 
 The repository is based on [this repo](https://github.com/VICO-UoE/DatasetCondensation) and [this repo](https://github.com/snu-mllab/Efficient-Dataset-Condensation). Please cite their papers if you use the code. 
 
